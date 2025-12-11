@@ -78,11 +78,12 @@ function App() {
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table: 'photos' },
-        () => {
-          fetchLatest()
+        payload => {
+          console.log("Realtime update detected:", payload);
+          fetchLatest();
         }
       )
-      .subscribe()
+      .subscribe();
 
     return () => supabase.removeChannel(subscription)
   }, [])
