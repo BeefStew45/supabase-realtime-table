@@ -29,7 +29,8 @@ function App() {
       "Dressing": "#cfcfcf",
       "Red Skin": "#4da3ff",
       "Pus": "#66ff66",
-      "Damage": "#000000"
+      "Dressing Damage": "#000000",
+      "Catheter": "#FFA500"
     }
 
     const keywords = Object.keys(colorMap)
